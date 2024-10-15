@@ -3,6 +3,8 @@ services:
   repo: https://github.com/SaulVVelazquez/aplicacion_web.git
   buildCommand: pip install -r requirements.txt
   startCommand: python3 app.py
+  plan: free
+  region: oregon
 - type: web
   repo: https://github.com/SaulVVelazquez/api_rest.git
   buildCommand: pip install -r requirements.txt
