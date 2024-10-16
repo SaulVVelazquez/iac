@@ -7,7 +7,6 @@ services:
     region: oregon
     buildCommand: pip install -r requirements.txt
     startCommand: python3 app.py 8090
-    rootDir: ./web
 
   - type: web
     name: api_rest
@@ -17,4 +16,3 @@ services:
     region: oregon
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --reload --port 8050
-    rootDir: ./app
