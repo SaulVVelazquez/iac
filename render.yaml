@@ -1,14 +1,14 @@
 services:
-- type: web
-  repo: https://github.com/SaulVVelazquez/aplicacion_web
-  buildCommand: pip install -r requirements.txt
-  startCommand: python3 app.py
-  plan: free
-  region: oregon
-services:  
-- type: web
-  repo: https://github.com/SaulVVelazquez/api_rest
-  buildCommand: pip install -r requirements.txt
-  startCommand: uvicorn main:app --reload --port 8050
-  plan: free
-  region: oregon
+  - type: web
+    repo: https://github.com/SaulVVelazquez/aplicacion_web
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 app.py
+    plan: free
+    region: oregon
+
+  - type: web
+    repo: https://github.com/SaulVVelazquez/api_rest
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --reload --port 8050
+    plan: free
+    region: oregon
