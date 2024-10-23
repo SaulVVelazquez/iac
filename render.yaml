@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: app_web
+    runtime: python
+    repo: https://github.com/SaulVVelazquez/aplicacion_webiac.git
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 app.py 8081
+    rootDir: ./web
+
+  - type: web
+    name: api_rest
+    runtime: python
+    repo: https://github.com/SaulVVelazquez/api_rest-.git
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: fastapi run main.py
+    rootDir: ./app
